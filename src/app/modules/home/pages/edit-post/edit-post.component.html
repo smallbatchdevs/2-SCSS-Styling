@@ -1,0 +1,16 @@
+<div *ngIf="form$ | async as form">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <div>
+      <h5>Title</h5>
+      <input type="text" formControlName="title">
+    </div>
+    <div>
+      <h5>Body</h5>
+      <textarea formControlName="body"></textarea>
+    </div>
+    <div>
+      <button type="submit">Save</button>
+      <a routerLink="/">Home</a>
+    </div>
+  </form>
+</div>
